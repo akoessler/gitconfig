@@ -21,3 +21,13 @@ Link to the config in `~/git` in global user config `~/.gitconfig`, e.g.:
 => Global git config will be taken from the shared config in the repo.
 
 Add more machine specific configuration here in this file.
+
+## Linux / WSL
+
+Note for Linux/WSL: The ssh and gpg config is made to make it work on Windows. For Linux and WSL the ssh and gpg commands must be reset:
+```
+[core]
+    sshCommand = ssh
+[gpg]
+    program = gpg
+```
