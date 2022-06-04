@@ -6,6 +6,10 @@ Global git configuration files, shared across multiple machines (work, private) 
 
 Checkout repository to ~/git
 
+```
+gh repo clone akoessler/gitconfig git
+```
+
 Link to the config in `~/git` in global user config `~/.gitconfig`, e.g.:
 
 ```
