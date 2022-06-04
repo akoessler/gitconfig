@@ -1,0 +1,9 @@
+[user]
+	name = Andreas Kössler
+	email = github@akoessler.com
+	signingkey = E334A9E877E2DE93
+
+[safe]
+	directory = C:/Users/akoes/git
+	directory = C:/Users/akoes/Documents/PowerShell
+	directory = C:/Users/akoes/Documents/WindowsPowerShell

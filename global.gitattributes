@@ -1,0 +1,13 @@
+# Set the default behavior
+* text=auto
+
+# Unix script files must always be lf
+*.sh text eol=lf
+gradlew text eol=lf
+
+# Windows script files must always be crlf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# VS sln files must be crlf
+*.sln text eol=crlf

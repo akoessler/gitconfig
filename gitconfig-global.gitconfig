@@ -1,0 +1,117 @@
+[core]
+	autocrlf = true
+	excludesfile = ~/git/global.gitignore
+	attributesfile = ~/git/global.gitattributes
+	sshCommand = C:/Windows/System32/OpenSSH/ssh.exe
+
+	##use vim as editor
+	#editor = vim
+
+	##use notepad++ as editor
+	#editor = 'C:\\Program Files\\Notepad++\\notepad++.exe' -multiInst -notabbar -nosession -noPlugins -x200 -y200
+
+	##use visual studio code as editor
+	editor = code --wait
+
+[gpg]
+	program = C:/Program Files (x86)/GnuPG/bin/gpg.exe
+
+[credential]
+	helper = wincred
+
+[credential "gitlab.eurofunk.com"]
+	provider = generic
+
+[push]
+	default = current
+
+[pull]
+	ff = only
+
+[commit]
+	gpgsign = true
+
+[rebase]
+	autosquash = true
+
+[sendpack]
+	sideband = false
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
+[alias]
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit
+	last = log -1 HEAD
+
+	a = add
+	aa = add .
+
+	amend = commit --amend --no-edit
+
+	co = checkout
+	nb = checkout -b
+	cs = !git checkout $1 && git status
+	cm = checkout master
+	cms = !git checkout master && git status
+	cmp = !git checkout master && git pull && git status
+
+	br = branch
+
+	ci = commit
+	cia = commit --amend --no-edit
+
+	cp = cherry-pick
+	cpx = cherry-pick -x
+
+	fixup = commit --fixup
+
+	st = status
+
+	mc = merge --continue
+
+	ra = rebase --autosquash
+	rc = rebase --continue
+	ri = rebase --interactive
+
+	pf = push --force
+	pfl = push --force-with-lease
+
+	url = config --get remote.origin.url
+
+	find-merge = "!sh -c 'commit=$0 && branch=${1:-HEAD} && (git rev-list $commit..$branch --ancestry-path | cat -n; git rev-list $commit..$branch --first-parent | cat -n) | sort -k2 -s | uniq -f1 -d | sort -n | tail -1 | cut -f2'" 
+
+[diff]
+	tool = bc
+
+[difftool]
+	prompt = false
+
+[difftool "bc"]
+	path = C:/Program Files/Beyond Compare 4/bcomp.exe
+
+[difftool "vscode"]
+	cmd = code --wait --diff \"$LOCAL\" \"$REMOTE\"
+
+[difftool "intellij"]
+	cmd = idea64 diff \"$LOCAL\" \"$REMOTE\"
+
+[merge]
+	tool = bc
+	renamelimit=2603
+
+[mergetool]
+	prompt = false
+
+[mergetool "bc"]
+	path = C:/Program Files/Beyond Compare 4/bcomp.exe
+
+[mergetool "vscode"]
+	cmd = code --wait --diff \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
+
+[mergetool "intellij"]
+	cmd = idea64 merge \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
+	trustExitCode = true
