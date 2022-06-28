@@ -3,6 +3,7 @@
 	excludesfile = ~/git/global.gitignore
 	attributesfile = ~/git/global.gitattributes
 	sshCommand = C:/Windows/System32/OpenSSH/ssh.exe
+	fsmonitor = true
 
 	##use vim as editor
 	#editor = vim
