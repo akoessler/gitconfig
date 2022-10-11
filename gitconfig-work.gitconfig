@@ -9,29 +9,29 @@
 	directory = C:/Users/ankoessler/Documents/WindowsPowerShell
 
 
-[includeIf "gitdir/i:D:/dev/e3/"]
-	path = D:/dev/e3/.gitconfig
+[includeIf "gitdir/i:C:/dev/e3/eldis3/"]
+	path = C:/dev/e3/eldis3/.gitconfig
 
-[includeIf "gitdir/i:**/mnt/d/dev/e3/"]
-	path = /mnt/d/dev/e3/.gitconfig
-
-
-[includeIf "gitdir/i:D:/dev/mrs/"]
-	path = D:/dev/mrs/.gitconfig
-
-[includeIf "gitdir/i:**/mnt/d/dev/mrs/"]
-	path = /mnt/d/dev/mrs/.gitconfig
+[includeIf "gitdir/i:**/mnt/c/dev/e3/eldis3/"]
+	path = /mnt/c/dev/e3/eldis3/.gitconfig
 
 
-[includeIf "gitdir/i:D:/dev/github/"]
-	path = D:/dev/github/.gitconfig
+[includeIf "gitdir/i:C:/dev/mrs/"]
+	path = C:/dev/mrs/.gitconfig
 
-[includeIf "gitdir/i:**/mnt/d/dev/github/"]
-	path = /mnt/d/dev/github/.gitconfig
+[includeIf "gitdir/i:**/mnt/c/dev/mrs/"]
+	path = /mnt/c/dev/mrs/.gitconfig
+
+
+[includeIf "gitdir/i:C:/dev/github/"]
+	path = C:/dev/github/.gitconfig
+
+[includeIf "gitdir/i:**/mnt/c/dev/github/"]
+	path = /mnt/c/dev/github/.gitconfig
 
 
 [includeIf "gitdir/i:C:/Users/ankoessler/"]
-	path = D:/dev/github/.gitconfig
+	path = C:/dev/github/.gitconfig
 
 [includeIf "gitdir/i:**/mnt/c/Users/ankoessler/"]
-	path = /mnt/d/dev/github/.gitconfig
+	path = /mnt/c/dev/github/.gitconfig
