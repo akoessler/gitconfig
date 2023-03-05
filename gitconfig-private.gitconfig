@@ -7,3 +7,6 @@
 	directory = C:/Users/akoes/git
 	directory = C:/Users/akoes/Documents/PowerShell
 	directory = C:/Users/akoes/Documents/WindowsPowerShell
+
+[includeIf "gitdir/i:D:/Code/local/"]
+	path = D:/Code/local/.gitconfig
