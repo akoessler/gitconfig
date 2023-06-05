@@ -9,11 +9,11 @@
 	directory = C:/Users/ankoessler/Documents/WindowsPowerShell
 
 
-[includeIf "gitdir/i:C:/dev/e3/eldis3/"]
-	path = C:/dev/e3/eldis3/.gitconfig
+[includeIf "gitdir/i:C:/dev/e3/"]
+	path = C:/dev/e3/.gitconfig
 
 [includeIf "gitdir/i:**/mnt/c/dev/e3/eldis3/"]
-	path = /mnt/c/dev/e3/eldis3/.gitconfig
+	path = /mnt/c/dev/e3/.gitconfig
 
 
 [includeIf "gitdir/i:C:/dev/mrs/"]
