@@ -3,6 +3,9 @@
 	email = github@akoessler.com
 	signingkey = E334A9E877E2DE93
 
+[credential "https://git.local.akoessler.com"]
+	provider = generic
+
 [safe]
 	directory = C:/Users/akoes/git
 	directory = C:/Users/akoes/Documents/PowerShell

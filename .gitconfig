@@ -1,0 +1,5 @@
+# .gitconfig template - for user profile folder
+
+[include]
+	path = ~/git/gitconfig-global.gitconfig
+	path = ~/git/gitconfig-private.gitconfig
