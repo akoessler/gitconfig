@@ -4,6 +4,7 @@
 	attributesfile = ~/git/global.gitattributes
 	sshCommand = C:/Windows/System32/OpenSSH/ssh.exe
 	fsmonitor = true
+	longpaths = true
 
 	##use vim as editor
 	#editor = vim
