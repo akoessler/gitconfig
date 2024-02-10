@@ -97,7 +97,7 @@
 	prompt = false
 
 [difftool "bc"]
-	path = C:/Program Files/Beyond Compare 4/bcomp.exe
+	cmd = \"C:\\Program Files\\Beyond Compare 5\\BComp.exe\" \"$LOCAL\" \"$REMOTE\"
 
 [difftool "vscode"]
 	cmd = code --wait --diff \"$LOCAL\" \"$REMOTE\"
@@ -113,7 +113,7 @@
 	prompt = false
 
 [mergetool "bc"]
-	path = C:/Program Files/Beyond Compare 4/bcomp.exe
+	cmd = \"C:\\Program Files\\Beyond Compare 5\\BComp.exe\" \"$REMOTE\" \"$LOCAL\" \"$BASE\" \"$MERGED\"
 
 [mergetool "vscode"]
 	cmd = code --wait --diff \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
