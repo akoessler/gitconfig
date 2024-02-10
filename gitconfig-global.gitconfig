@@ -92,32 +92,33 @@
 
 [diff]
 	tool = bc
-
 [difftool]
 	prompt = false
-
-[difftool "bc"]
-	cmd = \"C:\\Program Files\\Beyond Compare 5\\BComp.exe\" \"$LOCAL\" \"$REMOTE\"
-
-[difftool "vscode"]
-	cmd = code --wait --diff \"$LOCAL\" \"$REMOTE\"
-
-[difftool "intellij"]
-	cmd = idea64 diff \"$LOCAL\" \"$REMOTE\"
 
 [merge]
 	tool = bc
 	renamelimit=2603
-
 [mergetool]
 	prompt = false
 
+[difftool "bc"]
+	cmd = \"C:/Program Files/Beyond Compare 5/BComp.exe\" \"$LOCAL\" \"$REMOTE\"
 [mergetool "bc"]
-	cmd = \"C:\\Program Files\\Beyond Compare 5\\BComp.exe\" \"$REMOTE\" \"$LOCAL\" \"$BASE\" \"$MERGED\"
+	cmd = \"C:/Program Files/Beyond Compare 5/BComp.exe\" \"$LOCAL\" \"$REMOTE\" \"$BASE\" -o \"$MERGED\"
 
+[difftool "vscode"]
+	cmd = code --wait --diff \"$LOCAL\" \"$REMOTE\"
 [mergetool "vscode"]
 	cmd = code --wait --diff \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
 
+[difftool "intellij"]
+	cmd = idea64 diff \"$LOCAL\" \"$REMOTE\"
 [mergetool "intellij"]
 	cmd = idea64 merge \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
+	trustExitCode = true
+
+[difftool "sourcetree"]
+	cmd = \"C:/Program Files/Beyond Compare 5/BComp.exe\" \"$LOCAL\" \"$REMOTE\"
+[mergetool "sourcetree"]
+	cmd = \"C:/Program Files/Beyond Compare 5/BComp.exe\" \"$LOCAL\" \"$REMOTE\" \"$BASE\" -o \"$MERGED\"
 	trustExitCode = true
