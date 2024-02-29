@@ -61,9 +61,9 @@
 	co = checkout
 	nb = checkout -b
 	cs = !git checkout $1 && git status
-	cm = checkout master
-	cms = !git checkout master && git status
-	cmp = !git checkout master && git pull && git status
+	cm = checkout main
+	cms = !git checkout main && git status
+	cmp = !git checkout main && git pull && git status
 
 	br = branch
 
