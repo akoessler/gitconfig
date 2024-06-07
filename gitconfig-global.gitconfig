@@ -59,28 +59,38 @@
 	amend = commit --amend --no-edit
 
 	co = checkout
-	nb = checkout -b
-	cs = !git checkout $1 && git status
-	cm = checkout main
-	cms = !git checkout main && git status
+	cm = !git checkout main && git status
 	cmp = !git checkout main && git pull && git status
 
+	nb = switch -c
+
 	br = branch
+	bm = branch -m
 
 	ci = commit
 	cia = commit --amend --no-edit
 
 	cp = cherry-pick
 	cpx = cherry-pick -x
+	cpa = cherry-pick --abort
 	cpc = cherry-pick --continue
 
 	fixup = commit --fixup
 
 	st = status
 
+	sw = switch
+	s = switch
+	sm = !git switch main && git status
+	smp = !git switch main && git pull && git status
+
+	sq = rebase --autosquash
+	squash = rebase --autosquash
+
+	ma = merge --abort
 	mc = merge --continue
 
-	ra = rebase --autosquash
+	ra = rebase --abort
 	rc = rebase --continue
 	ri = rebase --interactive
 
