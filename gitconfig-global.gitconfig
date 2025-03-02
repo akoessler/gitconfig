@@ -1,9 +1,10 @@
 [core]
-	autocrlf = true
+	autocrlf = false
 	excludesfile = ~/git/global.gitignore
 	attributesfile = ~/git/global.gitattributes
 	sshCommand = C:/Windows/System32/OpenSSH/ssh.exe
 	fsmonitor = true
+	untrackedCache = true
 	longpaths = true
 
 	##use vim as editor
@@ -14,6 +15,18 @@
 
 	##use visual studio code as editor
 	editor = code --wait
+
+[help]
+	autocorrect = prompt
+
+[column]
+	ui = auto
+
+[branch]
+	sort = -committerdate
+
+[tag]
+	sort = version:refname
 
 [init]
 	defaultbranch = main
@@ -27,18 +40,27 @@
 [credential "gitlab.eurofunk.com"]
 	provider = generic
 
+[fetch]
+	prune = true
+	pruneTags = true
+	all = true
+
 [push]
-	default = current
+	default = simple
 	autoSetupRemote = true
 
 [pull]
 	ff = only
+	rebase = true
 
 [commit]
 	gpgsign = true
+	verbose = true
 
 [rebase]
-	autosquash = true
+	autoSquash = true
+	autoStash = true
+	updateRefs = true
 
 [sendpack]
 	sideband = false
@@ -104,12 +126,19 @@
 
 [diff]
 	tool = bc
+	algorithm = histogram
+	colorMoved = plain
+	mnemonicPrefix = true
+	renames = true
+
 [difftool]
 	prompt = false
 
 [merge]
 	tool = bc
-	renamelimit=2603
+	renamelimit = 2603
+	conflictstyle = zdiff3
+
 [mergetool]
 	prompt = false
 
@@ -134,3 +163,21 @@
 [mergetool "sourcetree"]
 	cmd = \"C:/Program Files/Beyond Compare 5/BComp.exe\" \"$LOCAL\" \"$REMOTE\" \"$BASE\" -o \"$MERGED\"
 	trustExitCode = true
+
+### <use delta as dif viewer>
+### https://github.com/dandavison/delta
+### => winget install dandavison.delta
+### needs less: https://github.com/jftuga/less-Windows
+### => winget install jftuga.less
+[core]
+	pager = delta
+
+[interactive]
+	diffFilter = delta --color-only
+
+[delta]
+	navigate = true  # use n and N to move between diff sections
+	dark = true      # or light = true, or omit for auto-detection
+	line-numbers = true
+	diff-so-fancy = true
+### </use delta as dif viewer>
