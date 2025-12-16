@@ -3,6 +3,9 @@
 	email = ankoessler@eurofunk.com
 	signingkey = De5EF1C2D1531CF8
 
+[core]
+	autocrlf = false
+
 [safe]
 	directory = C:/Users/ankoessler/git
 	directory = C:/Users/ankoessler/Documents/PowerShell
